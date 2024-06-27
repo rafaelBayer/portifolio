@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react'
-import Header from './Header';
+import React, { useEffect } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
-const Template = ({ page }) => {
-    useEffect(() => {
-        document.title = page + " | Rafael Bayer";
-    }, [page])
+const Template = ({ page, children }) => {
+  useEffect(() => {
+    document.title = page + " | Rafael Bayer";
+  }, [page]);
   return (
-    <Header/>
-  )
-}
+    <>
+      <Header />
+      {children}
+      <Footer/>
+    </>
+  );
+};
 
-export default Template
+export default Template;
