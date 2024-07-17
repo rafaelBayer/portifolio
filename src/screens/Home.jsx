@@ -5,7 +5,7 @@ const Home = () => {
     const page = "Home";
   return (
     <Template page={page}>
-       Teste
+       <div>a</div>
 
     </Template>
   )

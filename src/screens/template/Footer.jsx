@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="bg-gray-900 text-white py-8">
-      <div class="container mx-auto text-center">
+    <footer class="text-white py-8">
+      <div class="text-center">
         <p class="mb-4">© 2024 Meu Nome. Todos os direitos reservados.</p>
         <div class="flex justify-center space-x-4">
           <a href="https://github.com" class="hover:text-blue-500">

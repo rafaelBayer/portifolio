@@ -7,11 +7,16 @@ const Template = ({ page, children }) => {
     document.title = page + " | Rafael Bayer";
   }, [page]);
   return (
-    <>
-      <Header />
-      {children}
-      <Footer/>
-    </>
+    <div className="overflow-x-hidden antialiased absolute top-0 z-[-2] h-screen  w-screen bg-gray-900">
+      <div className="container mx-auto">
+         <Header />
+         {children}
+         <Footer/>
+
+      </div>
+    </div>
+    // <div className="container mx-auto bg-gray-900">
+    // </div>
   );
 };
 
