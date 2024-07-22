@@ -16,7 +16,7 @@ const Header = () => {
         <h1 className="text-3xl font-bold inline-flex gap-x-2"> <FaReact color="#61DAFB" />Rb.</h1>
       </div>
       {/* DESKTOP */}
-      <div className="mob:hidden flex justify-center w-2/3 tablet:gap-x-16 text-lg">
+      <div className="mobile:hidden flex justify-center w-2/3 tablet:gap-x-16 text-lg">
         <div className="group">
           <a href="#home" class="group-hover:text-blue-500 inline-flex items-center gap-x-2">
             <AiOutlineHome />
