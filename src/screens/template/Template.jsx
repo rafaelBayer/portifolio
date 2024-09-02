@@ -9,10 +9,9 @@ const Template = ({ page, children }) => {
   return (
     <div className="overflow-x-hidden antialiased absolute top-0 z-[-2] h-screen  w-screen bg-gray-900">
       <div className="container mx-auto">
-         <Header />
-         {children}
-         <Footer/>
-
+        <Header />
+        {children}
+        <Footer />
       </div>
     </div>
     // <div className="container mx-auto bg-gray-900">

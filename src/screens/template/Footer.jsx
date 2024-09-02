@@ -7,21 +7,26 @@ const Footer = () => {
       <div className="text-center">
         <p className="mb-4">© 2024 Rafael Bayer. Todos os direitos reservados.</p>
         <div className="flex justify-center gap-x-4">
-          <a href="https://github.com/rafaelBayer"
+          <a
+            href="https://github.com/rafaelBayer"
             target="_blank"
             rel="noopener noreferrer"
-            title="Clique para acessar o Github" className="hover:text-blue-500 inline-flex items-center gap-x-1">
-          <AiFillGithub size="1rem" />
+            title="Clique para acessar o Github"
+            className="hover:text-blue-500 inline-flex items-center gap-x-1"
+          >
+            <AiFillGithub size="1rem" />
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/rafaelbayer0/"
+          <a
+            href="https://www.linkedin.com/in/rafaelbayer0/"
             target="_blank"
             rel="noopener noreferrer"
-            title="Clique para acessar o Linkedin" className="hover:text-blue-500 inline-flex items-center gap-x-1">
-              <AiFillLinkedin size="1rem" />
+            title="Clique para acessar o Linkedin"
+            className="hover:text-blue-500 inline-flex items-center gap-x-1"
+          >
+            <AiFillLinkedin size="1rem" />
             LinkedIn
           </a>
-         
         </div>
       </div>
     </footer>

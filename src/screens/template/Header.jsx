@@ -13,7 +13,11 @@ const Header = () => {
   return (
     <header className="flex text-white p-4">
       <div className="w-1/3">
-        <h1 className="text-3xl font-bold inline-flex gap-x-2"> <FaReact color="#61DAFB" />Rb.</h1>
+        <h1 className="text-3xl font-bold inline-flex gap-x-2">
+          {" "}
+          <FaReact color="#61DAFB" />
+          Rb.
+        </h1>
       </div>
       {/* DESKTOP */}
       <div className="mobile:hidden flex justify-center w-2/3 tablet:gap-x-16 text-lg">
@@ -34,9 +38,9 @@ const Header = () => {
         </div>
 
         <div className="group">
-          <a href="#projetos" class="group-hover:text-blue-500 inline-flex items-center gap-x-2">
+          <a href="#experiencia" class="group-hover:text-blue-500 inline-flex items-center gap-x-2">
             <AiOutlineFundProjectionScreen />
-            Projetos
+            Experiência
           </a>
           <div className={`w-0 bottom-0 left-0 h-1 bg-blue-500 transition-all duration-300 rounded-lg group-hover:w-full`}></div>
         </div>
@@ -88,9 +92,9 @@ const Header = () => {
             </div>
 
             <div className="block px-2 py-1">
-              <a href="#projetos" class="inline-flex items-center">
+              <a href="#experiencia" class="inline-flex items-center">
                 <AiOutlineFundProjectionScreen />
-                Projetos
+                Experiência
               </a>
             </div>
 
