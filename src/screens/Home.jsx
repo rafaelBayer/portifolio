@@ -33,6 +33,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Sobre Mim */}
       <div id="sobre" className="text-white flex flex-col tablet:flex-row p-12">
         <div className="bg-gray-800 w-full flex flex-col items-center justify-center p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold tablet:text-4xl mb-4">Sobre mim</h2>
@@ -43,16 +44,18 @@ const Home = () => {
           </p>
         </div>
       </div>
+      {/* Sobre Mim */}
 
+      {/* Experiencias */}
       <div id="experiencia" className="text-white flex flex-col p-12">
         <Experiencia
           experiencias={[
             {
               empresa: "Segure - Segurança do trabalho",
-              cargo: "Desenvolvedor full-stack | Pleno",
+              cargo: "Desenvolvedor full-stack - Pleno",
               inicio: "Junho 2024",
               fim: "Presente",
-              descricao: "Desenvolver e manter o sistema web, sou responsavel por gerir a equipe e.",
+              descricao: "Em desenvolvimento!",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -63,10 +66,10 @@ const Home = () => {
             },
             {
               empresa: "Segure - Segurança do trabalho",
-              cargo: "Desenvolvedor full-stack | Junior",
+              cargo: "Desenvolvedor full-stack - Junior",
               inicio: "Junho 2022",
               fim: "Junho 2024",
-              descricao: "A",
+              descricao: "Em desenvolvimento!",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -80,7 +83,7 @@ const Home = () => {
               cargo: "Estagiario em programação",
               inicio: "Dezembro 2021",
               fim: "Junho 2022",
-              descricao: "A",
+              descricao: "Em desenvolvimento!",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -91,40 +94,33 @@ const Home = () => {
             },
           ]}
         />
-
-        {/* <Experiencia
-          cargo="Desenvolvedor full-stack | Junior"
-          inicio="Junho 2023"
-          fim="Junho 2024"
-          descricao="Desenvolvimento de aplicações web utilizando React.js, Node.js e MongoDB. Responsável pela criação de interfaces de usuário e integração com APIs REST."
-        />
-
-        <Experiencia
-          cargo="Estagiario em programação"
-          inicio="Dezembro 2022"
-          fim="Junho 2023"
-          descricao="Auxiliando no desenvolvimento web, resolvendo problema e implementando novas funcionalidades."
-        /> */}
       </div>
+      {/* Experiencias */}
     </Template>
   );
 };
 
 const Experiencia = ({ experiencias }) => {
+  const Tecnologias = ({ tecnologia, experienciaId }) => {
+    return (
+      <div
+        key={"tecnologia-" + tecnologia.id + "-" + experienciaId}
+        className="p-1 items-center mr-2 rounded-md hover:bg-blue-500 transition-colors duration-200"
+      >
+        {tecnologia.nome}
+      </div>
+    );
+  };
   return (
     <div className="bg-gray-800 text-white p-6 rounde-lg shadow-lg mb-4">
       {experiencias.map((item) => (
         <div key={item.id} className="mb-4 p-2 rounded-lg hover:bg-gray-700 transition duration-300">
-          <div className="flex moblile:flex-col justify-between items-center">
+          <div className="flex mobile:flex-col laptop:space-x-6 mobile:space-y-2 items-center">
             <span className="text-sm text-gray-400">
               {item.inicio} - {item.fim}
             </span>
             <h3 className="mobile:text-sm text-lg font-semibold">{item.cargo}</h3>
-            <h3 className="mobile:hidden text-lg font-semibold">{item.empresa}</h3>
-          </div>
-
-          <div className="laptop:hidden flex items-center text-center mt-2">
-            <h4 className="text-sm font-semibold">{item.empresa}</h4>
+            <h3 className="mobile:text-sm text-lg font-semibold">{item.empresa}</h3>
           </div>
 
           <div className="flex items-center">
@@ -132,38 +128,16 @@ const Experiencia = ({ experiencias }) => {
           </div>
 
           {!isEmpty(item.tecnologias) && (
-            <div className="flex flex-wrap space-x-2 space-y-2">
-              {item.tecnologias.map((tecnologia, index) => (
-                <div
-                  key={"tecnologia-" + index + "-" + experiencias.id}
-                  className="flex items-center p-2 bg-blue-700 rounded-full text-white m-2"
-                >
-                  <span>{tecnologia.nome}</span>
-                </div>
+            <div className="flex flex-wrap mt-4 items-center mobile:text-sm">
+              <strong className="pe-2">Tecnologias:</strong>
+              {item.tecnologias.map((tecnologia) => (
+                <Tecnologias tecnologia={tecnologia} experienciaId={item.id} />
               ))}
             </div>
           )}
         </div>
       ))}
     </div>
-    // <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg mb-4">
-    //   {cargos.map((item, index) => (
-    //     <div key={index} className="border-b border-black">
-    //       <div className="flex mobile:flex-col items-center mb-2 me-2 ">
-    //         <h3 className="w-1/3 text-lg font-semibold">{item.cargo}</h3>
-    //         <span className="w-2/3 text-sm text-gray-400">
-    //           {item.inicio} - {item.fim}
-    //         </span>
-    //       </div>
-
-    //       <div>
-    //         <p className="text-gray-300">descrição</p>
-
-    //       </div>
-
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 
