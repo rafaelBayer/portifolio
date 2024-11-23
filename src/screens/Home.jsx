@@ -38,9 +38,8 @@ const Home = () => {
         <div className="bg-gray-800 w-full flex flex-col items-center justify-center p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold tablet:text-4xl mb-4">Sobre mim</h2>
           <p>
-            Especialista em desenvolvimento web com foco em React.js e PHP, com vasta experiência no desenvolvimento de sistemas
-            web, consumindo APIs RESTful. Possuo sólida experiência em trabalho em equipe e liderança, tendo liderado equipes de
-            desenvolvimento e auxiliado novos membros, contribuindo para o sucesso dos projetos.
+          Desenvolvedor web especializado em React.js e PHP, 3 anos de experiência criando e otimizando sistemas web robustos, focados no consumo de APIs RESTful.
+          Possuo sólida experiência em liderar equipes de desenvolvimento, promovendo colaboração eficaz e mentorando novos integrantes para garantir entregas bem-sucedidas e projetos de alta qualidade.
           </p>
         </div>
       </div>
@@ -55,7 +54,7 @@ const Home = () => {
               cargo: "Desenvolvedor full-stack - Pleno",
               inicio: "Junho 2024",
               fim: "Presente",
-              descricao: "Em desenvolvimento!",
+              descricao: "Responsável por desenvolver soluções completas, desde a interface (frontend) com React.js até a integração com o backend em PHP (CodeIgniter), otimizando a segurança e a performance dos sistemas.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -69,7 +68,7 @@ const Home = () => {
               cargo: "Desenvolvedor full-stack - Junior",
               inicio: "Junho 2022",
               fim: "Junho 2024",
-              descricao: "Em desenvolvimento!",
+              descricao: "Focado em evoluir sistemas existentes, implementando novas funcionalidades e corrigindo bugs em colaboração com uma equipe ágil.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -83,7 +82,7 @@ const Home = () => {
               cargo: "Estagiario em programação",
               inicio: "Dezembro 2021",
               fim: "Junho 2022",
-              descricao: "Em desenvolvimento!",
+              descricao: "Contribuí com tarefas de suporte ao desenvolvimento, ganhando experiência prática com React.js, PHP e ferramentas de versionamento como Git.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
