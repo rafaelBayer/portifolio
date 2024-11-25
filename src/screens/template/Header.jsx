@@ -65,6 +65,17 @@ const Header = () => {
           >
             <AiFillLinkedin size="1.8rem" />
           </a>
+          <a
+            className="ms-2"
+            href="https://wa.me/5551993109473?text=%22Ol%C3%A1,%20estou%20interessado%20em%20entrar%20em%20contato%20com%20voc%C3%AA!%22"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Entre em contato comigo!"
+          >
+            <button className="bg-blue-500 text-white font-semibold py-1 px-3 rounded-lg shadow-lg transition-all">
+              Entrar em contato
+            </button>
+          </a>
         </div>
       </div>
       {/* DESKTOP */}
@@ -119,7 +130,23 @@ const Header = () => {
                 >
                   <AiFillLinkedin size="1.5rem" />
                 </a>
+
+                {/* <a href="">
+                  <button className="bg-blue-500 text-white font-semibold py-2 px-1 rounded-lg shadow-lg transition-all">Entrar em contato</button>
+                </a> */}
               </div>
+            </div>
+
+            <div className="flex justify-center mt-2">
+              <a
+                href="https://wa.me/5551993109473?text=%22Ol%C3%A1,%20estou%20interessado%20em%20entrar%20em%20contato%20com%20voc%C3%AA!%22"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition-all">
+                  Entrar em contato
+                </button>
+              </a>
             </div>
           </div>
         </div>
