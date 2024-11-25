@@ -2,8 +2,6 @@ import React from "react";
 
 import Template from "./template/Template";
 import Imagem from "../assets/codeImage.png";
-import { BsChatRightTextFill } from "react-icons/bs";
-import { DiPhp } from "react-icons/di";
 import { isEmpty } from "../components/Util";
 
 const Home = () => {
