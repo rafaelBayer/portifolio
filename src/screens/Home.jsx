@@ -3,6 +3,7 @@ import React from "react";
 import Template from "./template/Template";
 import Imagem from "../assets/codeImage.png";
 import { isEmpty } from "../components/Util";
+import { AiFillLinkedin, AiOutlineMail, AiFillGithub } from "react-icons/ai";
 
 const Home = () => {
   const page = "Home";
@@ -33,11 +34,13 @@ const Home = () => {
 
       {/* Sobre Mim */}
       <div id="sobre" className="text-white flex flex-col tablet:flex-row p-12">
-        <div className="bg-gray-800 w-full flex flex-col items-center justify-center p-6 rounded-lg shadow-lg">
+        <div className="bg-card w-full flex flex-col items-center justify-center p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold tablet:text-4xl mb-4">Sobre mim</h2>
           <p>
-          Desenvolvedor web especializado em React.js e PHP, 3 anos de experiência criando e otimizando sistemas web robustos, focados no consumo de APIs RESTful.
-          Possuo sólida experiência em liderar equipes de desenvolvimento, promovendo colaboração eficaz e mentorando novos integrantes para garantir entregas bem-sucedidas e projetos de alta qualidade.
+            Desenvolvedor web especializado em React.js e PHP, 3 anos de experiência criando e otimizando sistemas web
+            robustos, focados no consumo de APIs RESTful. Possuo sólida experiência em liderar equipes de
+            desenvolvimento, promovendo colaboração eficaz e mentorando novos integrantes para garantir entregas
+            bem-sucedidas e projetos de alta qualidade.
           </p>
         </div>
       </div>
@@ -52,7 +55,8 @@ const Home = () => {
               cargo: "Desenvolvedor full-stack - Pleno",
               inicio: "Junho 2024",
               fim: "Presente",
-              descricao: "Responsável por desenvolver soluções completas, desde a interface (frontend) com React.js até a integração com o backend em PHP (CodeIgniter), otimizando a segurança e a performance dos sistemas.",
+              descricao:
+                "Responsável por desenvolver soluções completas, desde a interface (frontend) com React.js até a integração com o backend em PHP (CodeIgniter), otimizando a segurança e a performance dos sistemas.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -66,7 +70,8 @@ const Home = () => {
               cargo: "Desenvolvedor full-stack - Junior",
               inicio: "Junho 2022",
               fim: "Junho 2024",
-              descricao: "Focado em evoluir sistemas existentes, implementando novas funcionalidades e corrigindo bugs em colaboração com uma equipe ágil.",
+              descricao:
+                "Focado em evoluir sistemas existentes, implementando novas funcionalidades e corrigindo bugs em colaboração com uma equipe ágil.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -80,7 +85,8 @@ const Home = () => {
               cargo: "Estagiario em programação",
               inicio: "Dezembro 2021",
               fim: "Junho 2022",
-              descricao: "Contribuí com tarefas de suporte ao desenvolvimento, ganhando experiência prática com React.js, PHP e ferramentas de versionamento como Git.",
+              descricao:
+                "Contribuí com tarefas de suporte ao desenvolvimento, ganhando experiência prática com React.js, PHP e ferramentas de versionamento como Git.",
               tecnologias: [
                 { id: 1, nome: "React.js", icone: "" },
                 { id: 2, nome: "PHP", icone: "" },
@@ -93,6 +99,54 @@ const Home = () => {
         />
       </div>
       {/* Experiencias */}
+
+      {/* Contato */}
+      <section id="contato" className="section-container text-white">
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          <h2 className="text-2xl font-bold">Vamos conversar?</h2>
+          <p className="text-foreground/70">
+            Estou sempre aberto a novas oportunidades e projetos interessantes. Se você tem um projeto em mente ou
+            apenas quer trocar uma ideia, entre em contato!
+          </p>
+
+          <div className="flex justify-center gap-6">
+            <a
+              href="#"
+              className="p-3 glass rounded-full hover:text-accent transition-colors"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/rafaelbayer0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Clique para acessar o Linkedin"
+            >
+              <AiFillLinkedin size={24} />
+            </a>
+
+            <a
+              href="#"
+              className="p-3 glass rounded-full hover:text-accent transition-colors"
+              aria-label="LinkedIn"
+              href="https://github.com/rafaelBayer"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Clique para acessar o Github"
+            >
+              <AiFillGithub size={24} />
+            </a>
+
+            <a
+              href="#"
+              className="p-3 glass rounded-full hover:text-accent transition-colors"
+              aria-label="LinkedIn"
+              href="mailto:rafaelbayer00@gmail.com"
+              title="Clique para entrar em contato via Email"
+            >
+              <AiOutlineMail size={24} />
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* Contato */}
     </Template>
   );
 };
@@ -102,16 +156,16 @@ const Experiencia = ({ experiencias }) => {
     return (
       <div
         key={"tecnologia-" + tecnologia.id + "-" + experienciaId}
-        className="p-1 items-center mr-2 rounded-md hover:bg-blue-500 transition-colors duration-200"
+        className="p-1 items-center mr-2 rounded-md hover:bg-accent hover:text-black transition-colors duration-200"
       >
         {tecnologia.nome}
       </div>
     );
   };
   return (
-    <div className="bg-gray-800 text-white p-6 rounde-lg shadow-lg mb-4">
+    <div className="bg-card text-white p-6 rounde-lg shadow-lg mb-4">
       {experiencias.map((item) => (
-        <div key={item.id} className="mb-4 p-2 rounded-lg hover:bg-gray-700 transition duration-300">
+        <div key={item.id} className="mb-4 p-2 rounded-lg">
           <div className="flex mobile:flex-col laptop:space-x-6 mobile:space-y-2 items-center">
             <span className="text-sm text-gray-400">
               {item.inicio} - {item.fim}

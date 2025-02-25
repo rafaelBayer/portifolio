@@ -12,7 +12,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Clique para acessar o Github"
-            className="hover:text-blue-500 inline-flex items-center gap-x-1"
+            className="hover:text-accent inline-flex items-center gap-x-1"
           >
             <AiFillGithub size="1rem" />
             GitHub
@@ -22,7 +22,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             title="Clique para acessar o Linkedin"
-            className="hover:text-blue-500 inline-flex items-center gap-x-1"
+            className="hover:text-accent inline-flex items-center gap-x-1"
           >
             <AiFillLinkedin size="1rem" />
             LinkedIn
