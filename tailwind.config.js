@@ -15,6 +15,8 @@ module.exports = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ring: "hsl(var(--ring))",
+        border: "hsl(var(--border))",
         accent: {
           DEFAULT: "#64ffda",
           hover: "#4ad6b5",
@@ -24,7 +26,31 @@ module.exports = {
           hover: "rgba(255, 255, 255, 0.1)",
         },
       },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        typing: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+        blink: {
+          "50%": { borderColor: "transparent" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in": "slide-in 0.5s ease-out",
+        typing: "typing 1s steps(15, end), blink .75s step-end infinite",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
 };

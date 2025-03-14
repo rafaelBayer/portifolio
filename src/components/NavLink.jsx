@@ -6,7 +6,7 @@ const NavLink = ({ href, children, toggleMenu = null }) => {
     <div className="group mobile:block mobile:px-2 mobile:py-1">
       <a
         href={`#${href}`}
-        class="text-foreground/70 group-hover:text-foreground inline-flex items-center gap-x-2"
+        className="text-foreground/70 group-hover:text-foreground inline-flex items-center gap-x-2"
         onClick={() => {
           !isEmpty(toggleMenu) && toggleMenu();
         }}
