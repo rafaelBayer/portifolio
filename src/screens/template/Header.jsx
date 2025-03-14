@@ -66,6 +66,11 @@ const Header = () => {
               <AiOutlineFundProjectionScreen />
               Experiência
             </NavLink>
+
+            <NavLink href={"contato"} toggleMenu={toggleMenu}>
+          <AiOutlineUser />
+          Contato
+        </NavLink>
           </div>
         </div>
       </div>
