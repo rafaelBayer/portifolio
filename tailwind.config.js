@@ -16,6 +16,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         ring: "hsl(var(--ring))",
+        border: "hsl(var(--border))",
         accent: {
           DEFAULT: "#64ffda",
           hover: "#4ad6b5",
