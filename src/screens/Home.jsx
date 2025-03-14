@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import Template from "./template/Template";
 import Imagem from "../assets/codeImage.png";
@@ -7,30 +7,60 @@ import { AiFillLinkedin, AiOutlineMail, AiFillGithub } from "react-icons/ai";
 
 const Home = () => {
   const page = "Home";
+
+  const typingRef = useRef();
+
+  useEffect(() => {
+    console.log(typingRef.current)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-typing');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (typingRef.current) {
+      observer.observe(typingRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Template page={page}>
-      <div id="home" className="text-white flex flex-col tablet:flex-row p-12">
-        <div className="w-full tablet:w-1/2 flex flex-col items-center justify-center">
-          {/* Desktop */}
-          <h1 className="mobile:hidden text-2xl tablet:text-4xl">
-            Bem-vindo! Eu sou <strong className="text-blue-500">Rafael Bayer</strong>
-          </h1>
-          {/* Desktop */}
+      {/* <div id="home" className="text-white flex flex-col tablet:flex-row p-12">
+        <div className="animate-fade-in"></div>
+        <h2 className="text-accent font-mono">Teste</h2>
 
-          {/* Mobile */}
-          <h1 className="tablet:hidden text-2xl tablet:text-4xl">Bem-vindo!</h1>
-          <h1 className="tablet:hidden text-2xl tablet:text-4xl mb-1">
-            Eu sou <strong className="text-blue-500">Rafael Bayer</strong>
-          </h1>
-          {/* Mobile */}
+        
+      </div> */}
 
-          <p className="text-xl tablet:text-3xl">Desenvolvedor Full-stack</p>
+      <section className="min-h-screen flex items-center justify-center relative">
+        <div className="section-container">
+          <div className="space-y-6 animate-fade-in">
+            <h2 className="text-accent font-mono">Olá, eu sou</h2>
+            <h1 className="text-4xl mobile:text-2xl tablet:text-6xl font-bold">
+            {/* mobile:text-6xl tablet:text-7xl */}
+              <div 
+              ref={typingRef} 
+              className="text-white overflow-hidden whitespace-nowrap border-r-4 border-accent">
+                Desenvolvedor Fullstack
+              </div>
+            </h1>
+            <p className="text-foreground/70 max-w-xl text-lg">
+              Especializado em criar experiências digitais excepcionais. Foco em desenvolvimento web moderno com React,
+              Node.js e tecnologias cloud.
+            </p>
+            <button className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors">
+              Ver Projetos
+              {/* <ArrowRight className="group-hover:translate-x-1 transition-transform" /> */}
+            </button>
+          </div>
         </div>
-
-        <div className="w-full tablet:w-1/2">
-          <img src={Imagem} alt="a" />
-        </div>
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
+      </section>
 
       {/* Sobre Mim */}
       <div id="sobre" className="text-white flex flex-col tablet:flex-row p-12">
@@ -111,7 +141,6 @@ const Home = () => {
 
           <div className="flex justify-center gap-6">
             <a
-              href="#"
               className="p-3 glass rounded-full hover:text-accent transition-colors"
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/rafaelbayer0/"
@@ -123,7 +152,6 @@ const Home = () => {
             </a>
 
             <a
-              href="#"
               className="p-3 glass rounded-full hover:text-accent transition-colors"
               aria-label="LinkedIn"
               href="https://github.com/rafaelBayer"
@@ -135,7 +163,6 @@ const Home = () => {
             </a>
 
             <a
-              href="#"
               className="p-3 glass rounded-full hover:text-accent transition-colors"
               aria-label="LinkedIn"
               href="mailto:rafaelbayer00@gmail.com"
