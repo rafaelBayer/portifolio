@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
-
-import Template from "./template/Template";
-import Imagem from "../assets/codeImage.png";
-import { isEmpty } from "../components/Util";
 import { AiFillLinkedin, AiOutlineMail, AiFillGithub } from "react-icons/ai";
+import { FiArrowRight } from "react-icons/fi";
+
+import { isEmpty } from "../components/Util";
+import Template from "./template/Template";
+import SobreMim from "../components/SobreMim";
 
 const Home = () => {
   const page = "Home";
@@ -30,22 +31,14 @@ const Home = () => {
 
   return (
     <Template page={page}>
-      {/* <div id="home" className="text-white flex flex-col tablet:flex-row p-12">
-        <div className="animate-fade-in"></div>
-        <h2 className="text-accent font-mono">Teste</h2>
-
-        
-      </div> */}
-
       <section className="min-h-screen flex items-center justify-center relative">
         <div className="section-container">
           <div className="space-y-6 animate-fade-in">
             <h2 className="text-accent font-mono">Olá, eu sou</h2>
-            <h1 className="text-4xl mobile:text-2xl tablet:text-6xl font-bold">
-            {/* mobile:text-6xl tablet:text-7xl */}
+            <h1 className="text-4xl mobile:text-2xl tablet:text-6xl font-bold inline-block">
               <div 
               ref={typingRef} 
-              className="text-white overflow-hidden whitespace-nowrap border-r-4 border-accent">
+              className="text-white w-auto overflow-hidden whitespace-nowrap border-r-4 border-accent">
                 Desenvolvedor Fullstack
               </div>
             </h1>
@@ -55,27 +48,13 @@ const Home = () => {
             </p>
             <button className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors">
               Ver Projetos
-              {/* <ArrowRight className="group-hover:translate-x-1 transition-transform" /> */}
+              <FiArrowRight size={20} className="group-hover:translate-x-1 transition-transform"/>
             </button>
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
       </section>
-
-      {/* Sobre Mim */}
-      <div id="sobre" className="text-white flex flex-col tablet:flex-row p-12">
-        <div className="bg-card w-full flex flex-col items-center justify-center p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold tablet:text-4xl mb-4">Sobre mim</h2>
-          <p>
-            Desenvolvedor web especializado em React.js e PHP, 3 anos de experiência criando e otimizando sistemas web
-            robustos, focados no consumo de APIs RESTful. Possuo sólida experiência em liderar equipes de
-            desenvolvimento, promovendo colaboração eficaz e mentorando novos integrantes para garantir entregas
-            bem-sucedidas e projetos de alta qualidade.
-          </p>
-        </div>
-      </div>
-      {/* Sobre Mim */}
-
+      <SobreMim/>
       {/* Experiencias */}
       <div id="experiencia" className="text-white flex flex-col p-12">
         <Experiencia
