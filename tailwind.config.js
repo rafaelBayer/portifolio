@@ -46,7 +46,7 @@ module.exports = {
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
-        typing: "typing 2.5s steps(40, end), blink .75s step-end infinite",
+        typing: "typing 1s steps(15, end), blink .75s step-end infinite",
       },
     },
   },

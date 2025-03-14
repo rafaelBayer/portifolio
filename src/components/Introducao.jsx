@@ -5,7 +5,6 @@ const Introducao = () => {
     const typingRef = useRef();
 
     useEffect(() => {
-        console.log(typingRef.current)
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {

@@ -45,7 +45,7 @@ const Header = () => {
       {/* DESKTOP */}
 
       {/* MOBILE */}
-      <div class="tablet:hidden w-full flex justify-end">
+      <div className="tablet:hidden w-full flex justify-end">
         <button onClick={() => toggleMenu()} className="text-white focus:outline-none">
           {showMenu ? <IoClose size="2rem" /> : <HiMenuAlt3 size="2rem" />}
         </button>

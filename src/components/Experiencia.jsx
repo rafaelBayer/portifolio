@@ -68,7 +68,7 @@ const Experiencia = () => {
                 {experiencia.inicio} - {experiencia.fim}
               </span>
             </div>
-            <p className="text-foreground/70 mobile:text-sm">{experiencia.descricao}</p>
+            <div className="text-foreground/70 mobile:text-sm">{experiencia.descricao}</div>
             <div className="flex flex-wrap gap-2">
               {experiencia.tecnologias.map((tecnologia, indexTecnologia) => (
                 <span
