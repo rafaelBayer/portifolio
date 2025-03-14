@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ring: "hsl(var(--ring))",
         accent: {
           DEFAULT: "#64ffda",
           hover: "#4ad6b5",
@@ -44,7 +45,7 @@ module.exports = {
       animation: {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.5s ease-out",
-        typing: "typing 3.5s steps(40, end), blink .75s step-end infinite",
+        typing: "typing 2.5s steps(40, end), blink .75s step-end infinite",
       },
     },
   },
