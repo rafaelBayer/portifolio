@@ -30,12 +30,11 @@ const Introducao = () => {
               <div 
               ref={typingRef} 
               className="text-white w-auto overflow-hidden whitespace-nowrap border-r-4 border-accent">
-                Desenvolvedor Fullstack
+                Rafael Bayer
               </div>
             </h1>
             <p className="text-foreground/70 max-w-xl text-lg">
-              Especializado em criar experiências digitais excepcionais. Foco em desenvolvimento web moderno com React,
-              Node.js e tecnologias cloud.
+            Desenvolvedor fullstack com experiência em React.js, PHP e MySQL, sempre com o foco em entregar soluções práticas que gerem resultados reais. Meu compromisso é construir sistemas que atendam às necessidades do negócio e ofereçam uma experiência de usuário impecável.
             </p>
             <button className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors">
               Ver Projetos

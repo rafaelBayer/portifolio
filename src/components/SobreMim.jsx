@@ -8,9 +8,7 @@ const SobreMim = () => {
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-white text-2xl font-bold">Sobre mim</h2>
           <p className="text-foreground/70">
-            Desenvolvedor Fullstack com mais de 5 anos de experiência em desenvolvimento web. Especializado em criar
-            soluções escaláveis e de alta performance. Experiência em liderança de equipes e participação em decisões
-            estratégicas.
+          Sou um desenvolvedor fullstack com experiência em React.js, PHP e MySQL, criando soluções eficientes e escaláveis. Tenho boa comunicação, gosto de trocar ideias, dar opiniões e trabalhar em equipe para melhorar processos e otimizar sistemas. Além de programar, também gerencio equipes, organizo demandas e distribuo tarefas para garantir um fluxo de trabalho produtivo.
           </p>
 
           <div className="flex flex-wrap gap-2">
