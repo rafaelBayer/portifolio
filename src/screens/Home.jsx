@@ -1,60 +1,18 @@
-import React, { useEffect, useRef } from "react";
-import { AiFillLinkedin, AiOutlineMail, AiFillGithub } from "react-icons/ai";
-import { FiArrowRight } from "react-icons/fi";
+import React from "react";
 
 import { isEmpty } from "../components/Util";
 import Template from "./template/Template";
 import SobreMim from "../components/SobreMim";
+import Introducao from "../components/Introducao";
+import Contato from "../components/Contato";
 
 const Home = () => {
   const page = "Home";
 
-  const typingRef = useRef();
-
-  useEffect(() => {
-    console.log(typingRef.current)
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-typing');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (typingRef.current) {
-      observer.observe(typingRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <Template page={page}>
-      <section className="min-h-screen flex items-center justify-center relative">
-        <div className="section-container">
-          <div className="space-y-6 animate-fade-in">
-            <h2 className="text-accent font-mono">Olá, eu sou</h2>
-            <h1 className="text-4xl mobile:text-2xl tablet:text-6xl font-bold inline-block">
-              <div 
-              ref={typingRef} 
-              className="text-white w-auto overflow-hidden whitespace-nowrap border-r-4 border-accent">
-                Desenvolvedor Fullstack
-              </div>
-            </h1>
-            <p className="text-foreground/70 max-w-xl text-lg">
-              Especializado em criar experiências digitais excepcionais. Foco em desenvolvimento web moderno com React,
-              Node.js e tecnologias cloud.
-            </p>
-            <button className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors">
-              Ver Projetos
-              <FiArrowRight size={20} className="group-hover:translate-x-1 transition-transform"/>
-            </button>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
-      </section>
-      <SobreMim/>
+      <Introducao />
+      <SobreMim />
       {/* Experiencias */}
       <div id="experiencia" className="text-white flex flex-col p-12">
         <Experiencia
@@ -110,48 +68,7 @@ const Home = () => {
       {/* Experiencias */}
 
       {/* Contato */}
-      <section id="contato" className="section-container text-white">
-        <div className="max-w-2xl mx-auto text-center space-y-8">
-          <h2 className="text-2xl font-bold">Vamos conversar?</h2>
-          <p className="text-foreground/70">
-            Estou sempre aberto a novas oportunidades e projetos interessantes. Se você tem um projeto em mente ou
-            apenas quer trocar uma ideia, entre em contato!
-          </p>
-
-          <div className="flex justify-center gap-6">
-            <a
-              className="p-3 glass rounded-full hover:text-accent transition-colors"
-              aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/rafaelbayer0/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Clique para acessar o Linkedin"
-            >
-              <AiFillLinkedin size={24} />
-            </a>
-
-            <a
-              className="p-3 glass rounded-full hover:text-accent transition-colors"
-              aria-label="LinkedIn"
-              href="https://github.com/rafaelBayer"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Clique para acessar o Github"
-            >
-              <AiFillGithub size={24} />
-            </a>
-
-            <a
-              className="p-3 glass rounded-full hover:text-accent transition-colors"
-              aria-label="LinkedIn"
-              href="mailto:rafaelbayer00@gmail.com"
-              title="Clique para entrar em contato via Email"
-            >
-              <AiOutlineMail size={24} />
-            </a>
-          </div>
-        </div>
-      </section>
+      <Contato />
       {/* Contato */}
     </Template>
   );
