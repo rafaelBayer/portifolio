@@ -3,10 +3,25 @@ import React from "react";
 const Experiencia = () => {
   const experiencias = [
     {
-      empresa: "Segure - Segurança do trabalho",
-      cargo: "Desenvolvedor full-stack - Pleno",
-      inicio: "Junho 2024",
+      empresa: "Syonet",
+      cargo: "Desenvolvedor Full Stack Pleno",
+      inicio: "Maio 2025",
       fim: "Presente",
+      descricao:
+        (
+            <ul>
+                <li>- Desenvolvimento de aplicações web utilizando Next.js e PHP (CodeIgniter), participando da criação de novos projetos e evolução de sistemas existentes.</li>
+                <li>- Melhoria contínua e correção de bugs, garantindo estabilidade, manutenção e evolução das aplicações.</li>
+                <li>- Documentação e padronização de processos, além de suporte técnico e apoio a desenvolvedores.</li>
+            </ul>
+        ),
+      tecnologias: [{ nome: "Next.js" }, { nome: "PHP" }, { nome: "Codeigniter" }, { nome: "jQuery" }, { nome: "Tailwind CSS" }],
+    },
+    {
+      empresa: "Segure - Segurança do trabalho",
+      cargo: "Desenvolvedor Full Stack Pleno",
+      inicio: "Junho 2024",
+      fim: "Maio 2025",
       descricao:
         (
             <ul>
@@ -19,7 +34,7 @@ const Experiencia = () => {
     },
     {
       empresa: "Segure - Segurança do trabalho",
-      cargo: "Desenvolvedor full-stack - Junior",
+      cargo: "Desenvolvedor Full Stack Junior",
       inicio: "Junho 2022",
       fim: "Junho 2024",
       descricao:

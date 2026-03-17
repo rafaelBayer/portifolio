@@ -1,14 +1,28 @@
-import React from "react";
-
 const SobreMim = () => {
-  const tecnologias = ["React.js", "PHP", "MySQL", "Node.js", "Vue.js", "Git", "Docker"];
+  const tecnologias = [
+    "Next.js",
+    "PHP",
+    "MySQL",
+    "Codeigniter",
+    "jQuery",
+    "Tailwind CSS",
+    "Git",
+  ];
   return (
     <section id="sobre" className="section-container">
       <div className="grid tablet:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-white text-2xl font-bold">Sobre mim</h2>
           <p className="text-foreground/70">
-          Sou um desenvolvedor fullstack com experiência em React.js, PHP e MySQL, criando soluções eficientes e escaláveis. Tenho boa comunicação, gosto de trocar ideias, dar opiniões e trabalhar em equipe para melhorar processos e otimizar sistemas. Além de programar, também gerencio equipes, organizo demandas e distribuo tarefas para garantir um fluxo de trabalho produtivo.
+            Sou desenvolvedor fullstack com experiência em Next.js, PHP e MySQL,
+            criando soluções eficientes e escaláveis. Tenho boa comunicação e
+            gosto de trocar ideias e colaborar com o time para melhorar
+            processos e evoluir sistemas.
+          </p>
+          <p className="text-foreground/70">
+            Além do desenvolvimento, também atuo na organização de demandas e
+            gestão de equipe, ajudando a estruturar tarefas e manter um fluxo de
+            trabalho produtivo.
           </p>
 
           <div className="flex flex-wrap gap-2">

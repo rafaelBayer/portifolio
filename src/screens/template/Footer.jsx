@@ -1,11 +1,13 @@
-import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
+  const anoAtual = new Date().getFullYear();
   return (
     <footer className="text-white py-8">
       <div className="text-center">
-        <p className="mb-4">© 2024 Rafael Bayer. Todos os direitos reservados.</p>
+        <p className="mb-4">
+          © {anoAtual} Rafael Bayer. Todos os direitos reservados.
+        </p>
         <div className="flex justify-center gap-x-4">
           <a
             href="https://github.com/rafaelBayer"
