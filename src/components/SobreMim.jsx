@@ -14,15 +14,18 @@ const SobreMim = () => {
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-white text-2xl font-bold">Sobre mim</h2>
           <p className="text-foreground/70">
-            Sou desenvolvedor fullstack com experiência em Next.js, PHP e MySQL,
-            criando soluções eficientes e escaláveis. Tenho boa comunicação e
-            gosto de trocar ideias e colaborar com o time para melhorar
-            processos e evoluir sistemas.
+            Sou desenvolvedor fullstack e gosto de criar soluções que realmente
+            façam sentido para o usuário e para o negócio. Tenho experiência no
+            desenvolvimento de interfaces, sistemas e integrações, sempre
+            buscando escrever códigos mais organizados, reutilizáveis e fáceis
+            de manter.
           </p>
           <p className="text-foreground/70">
-            Além do desenvolvimento, também atuo na organização de demandas e
-            gestão de equipe, ajudando a estruturar tarefas e manter um fluxo de
-            trabalho produtivo.
+            Também tenho facilidade em me comunicar, trocar ideias com o time e
+            entender as necessidades de cada demanda. Além do desenvolvimento,
+            atuo na organização de tarefas e apoio na gestão de equipe, ajudando
+            a manter um fluxo de trabalho mais claro, produtivo e alinhado com
+            os objetivos do projeto.
           </p>
 
           <div className="flex flex-wrap gap-2">

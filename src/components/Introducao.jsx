@@ -21,7 +21,10 @@ const Introducao = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative"
+    >
       <div className="section-container">
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-accent font-mono">Olá, eu sou</h2>
@@ -34,10 +37,10 @@ const Introducao = () => {
             </div>
           </h1>
           <p className="text-foreground/70 max-w-xl text-lg">
-            Desenvolvedor fullstack com experiência em Next.js, PHP e MySQL,
-            focado em criar soluções práticas que gerem resultados reais. Busco
-            construir sistemas que atendam às necessidades do negócio e ofereçam
-            uma boa experiência para os usuários.
+            Desenvolvedor fullstack com experiência em Next.js, PHP e MySQL.
+            Trabalho criando interfaces, sistemas e integrações que resolvem
+            problemas reais, sempre buscando unir código bem estruturado, boa
+            experiência para o usuário e valor para o negócio.
           </p>
           <a
             href="#projects"
