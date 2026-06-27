@@ -1,4 +1,5 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { BiCoffee } from "react-icons/bi";
 
 const Footer = () => {
   const anoAtual = new Date().getFullYear();
@@ -28,6 +29,17 @@ const Footer = () => {
           >
             <AiFillLinkedin size="1rem" />
             LinkedIn
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/rafaelBayer_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apoiar no Buy Me a Coffee"
+            title="Buy Me a Coffee"
+            className="hover:text-accent inline-flex items-center gap-x-1"
+          >
+            <BiCoffee size="1rem" />
+            Apoiar
           </a>
         </div>
       </div>
