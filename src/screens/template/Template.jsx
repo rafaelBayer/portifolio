@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const Template = ({ page, children }) => {
   return (
-    <div className="overflow-x-hidden antialiased absolute top-0 z-[-2] h-screen  w-screen bg-background">
+    <div className="min-h-screen w-full overflow-x-hidden bg-background antialiased">
       {/* bg-gray-900 */}
       <Helmet>
         <title>{page} | Rafael Bayer</title>
@@ -24,7 +24,7 @@ const Template = ({ page, children }) => {
       </Helmet>
       <div className="mx-auto">
         <Header />
-        {children}
+        <main className="pt-20">{children}</main>
         <Footer />
       </div>
     </div>

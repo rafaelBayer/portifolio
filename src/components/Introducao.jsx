@@ -21,7 +21,7 @@ const Introducao = () => {
     return () => observer.disconnect();
   }, []);
   return (
-    <section className="min-h-screen flex items-center justify-center relative">
+    <section id="home" className="min-h-screen flex items-center justify-center relative">
       <div className="section-container">
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-accent font-mono">Olá, eu sou</h2>
@@ -39,13 +39,16 @@ const Introducao = () => {
             construir sistemas que atendam às necessidades do negócio e ofereçam
             uma boa experiência para os usuários.
           </p>
-          <button className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors">
+          <a
+            href="#projects"
+            className="group flex items-center gap-2 text-accent hover:text-accent-hover transition-colors"
+          >
             Ver Projetos
             <FiArrowRight
               size={20}
               className="group-hover:translate-x-1 transition-transform"
             />
-          </button>
+          </a>
         </div>
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
