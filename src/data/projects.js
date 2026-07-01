@@ -22,7 +22,7 @@ export const projects = [
       "Bol\u00e3o full stack com autentica\u00e7\u00e3o, palpites, rankings, bol\u00f5es privados e mata-mata.",
     description:
       "Aplica\u00e7\u00e3o full stack desenvolvida para gerenciar bol\u00f5es da Copa do Mundo. O sistema permite criar bol\u00f5es privados, convidar participantes, registrar palpites por partida, acompanhar rankings e montar uma chave completa de mata-mata. O projeto foi pensado para lidar com regras reais de produto, como autentica\u00e7\u00e3o, permiss\u00f5es por usu\u00e1rio, ranking por bol\u00e3o, bloqueio de palpites por prazo e separa\u00e7\u00e3o entre pontua\u00e7\u00e3o da fase de grupos, mata-mata e classifica\u00e7\u00e3o geral.",
-    image: "/projects/bolao-copa/home.png",
+    image: "/projects/bolao-copa/home.jpeg",
     screenshots: [
       "/projects/bolao-copa/groups.png",
       "/projects/bolao-copa/score_live.png",
